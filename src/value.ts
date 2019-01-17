@@ -3,16 +3,28 @@ export interface Props {
     y: number;
 }
 
-export class Value {
-    private value = 10
-    private props: Props = { x: 0, y: 0 };
+export interface XAndY {
+    x: number;
+    y: number;
+}
 
-    getValue(): number {
-        return this.value;
+export class Value {
+    private value: number = 10;
+    private props: XAndY = { x: 0, y: 0 };
+    private password: string = "xxx";
+
+    getValue(password: string): number {
+        if (password == this.password) {
+            return this.value;
+        } else {
+            return -1;
+        }
     }
 
     setValue(value: number): void {
-        this.value = value;
+        if (value > 0) {
+            this.value = value;
+        }
     }
 
     setProps(props: Props) {
