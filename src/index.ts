@@ -3,7 +3,7 @@
 // import { Student } from "./student";
 // import { VehicalType } from "./vehicaltype";
 // import { monuments, compareMonuments } from "./typedarrays"
-import { MyOptions } from "./manualtypevariation";
+// import { MyOptions } from "./manualtypevariation";
 
 // const elem = document.createElement("h3");
 // const v = new Value();
@@ -42,5 +42,17 @@ import { MyOptions } from "./manualtypevariation";
 // });
 // document.body.appendChild(table);
 
-const myopt = new MyOptions("cloth", true);
-myopt.setMaterial("steel");
+
+// const myopt = new MyOptions("cloth", true);
+// myopt.setMaterial("steel");
+
+import { BouncingBall } from "./BouncingBall";
+document.body.setAttribute("style", "margin: 10px");
+const canvas = document.createElement("canvas");
+canvas.setAttribute("style", "border: 2px solid black");
+canvas.id = "ball_canvas";
+canvas.width = 400;
+canvas.height = 400;
+const ball = new BouncingBall(canvas);
+console.log(ball);
+document.body.appendChild(canvas)

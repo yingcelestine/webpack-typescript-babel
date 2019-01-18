@@ -20,6 +20,4 @@ function getVehicalType(nWheels: NumberOfWheels): VehicalType {
     return VehicalType.Car;
 }
 
-const t = getVehicalType(4);
-
 export { VehicalType, NumberOfWheels, getVehicalType };
